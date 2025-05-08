@@ -20,7 +20,13 @@ Dart パッケージ名のルール（要約）
 予約語（if、forなど）を使ってはいけない
 ```
 
-次のコマンドで初期化。名前は「test_flutter」
+パターン1
+
+Android Studioの New Flutter Project で作成する。
+
+パターン2
+
+次のコマンドで作成する
 
 ```bash
 flutter create test_flutter
