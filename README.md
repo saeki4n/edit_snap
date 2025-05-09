@@ -166,3 +166,34 @@ iOSネイティブ設定
   <key>NSPhotoLibraryUsageDescription</key>
   <string>編集する画像を選択します。</string>
 ```
+
+アイコンを追加する
+
+```bash
+flutter pub add --dev build_runner flutter_gen_runner
+flutter pub add flutter_svg
+```
+
+flutter_svgを有効にするために pubspec.yaml に以下の設定を末尾などに追加する。
+
+```yml
+flutter_gen:
+  integrations:
+    flutter_svg: true
+```
+
+iconmonstrからアイコンを取得する(2025年5月現在ダウンロードを試みたが不可)
+<https://iconmonstr.com/>
+
+pubspec.yaml に以下の設定を追加する。
+
+```yml
+  assets:
+    - assets/
+```
+
+以下のコマンドを実行することでアイコンを扱うコードを生成する
+
+```bash
+flutter packages pub run build_runner build
+```

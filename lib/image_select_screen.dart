@@ -1,6 +1,7 @@
 import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import "package:edit_snap/edit_snap_screen.dart";
 import "package:image_picker/image_picker.dart";
 import "package:image/image.dart" as image_lib;
 
@@ -70,7 +71,15 @@ class _ImageSelectScreenState extends State<ImageSelectScreen> {
             if (imageBitmap != null)
               ElevatedButton(
                 // 画像を編集するボタン
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => ImageEditScreen(
+                        imageBitmap: imageBitmap,
+                      ),
+                    ),
+                  );
+                },
                 child: Text(l10n.imageEdit),
               ),
           ],
