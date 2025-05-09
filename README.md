@@ -152,3 +152,17 @@ Androidの場合の表示言語表示設定は次のサイトを参照
 
 [Flutter] アプリアイコン下のアプリ名のローカライゼーション
 <https://zenn.dev/chimay_white/articles/a2fafa63fed9a6>
+
+画像系のパッケージを導入する
+
+```bash
+flutter pub add image image_picker
+```
+
+iOSネイティブ設定
+./ios/Runner/Info.plist にて NSPhotoLibraryUsageDescription キーの下に説明文を追加する
+
+```xml
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>編集する画像を選択します。</string>
+```
